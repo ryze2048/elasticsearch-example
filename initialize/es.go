@@ -15,5 +15,6 @@ func InitElasticsearch() {
 	}
 
 	global.ES = client
+	global.ZAPLOG.Info("init es client successful")
 	return
 }
