@@ -1,5 +1,7 @@
 package process
 
 type Process struct {
-	Index Index
+	Index  Index
+	Add    Add
+	Update Update
 }
