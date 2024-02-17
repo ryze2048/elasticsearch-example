@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/ryze2048/elasticsearch-example/global"
 	"github.com/ryze2048/elasticsearch-example/initialize"
+	"github.com/ryze2048/elasticsearch-example/process"
 	"os"
 	"os/signal"
 	"syscall"
@@ -16,10 +17,11 @@ func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	fmt.Println(ctx)
 
-	// var p process.Process
+	var p process.Process
+	// p.Add.AddData(ctx)
+	p.Search.SearchOr(ctx)
 	// _ = p.Update.Update(ctx)
 	// p.Index.Create(ctx)
-	// _ = p.Index.Add(ctx)
 	sigChan := make(chan os.Signal, 1)
 	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGTERM)
 	for {

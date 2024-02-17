@@ -4,4 +4,5 @@ type Process struct {
 	Index  Index
 	Add    Add
 	Update Update
+	Search Search
 }

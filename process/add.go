@@ -11,10 +11,10 @@ type Add struct{}
 
 func (a *Add) AddData(ctx context.Context) (err error) {
 	article := Article{
-		Title:     "第一天",
-		Content:   "无名的人",
+		Title:     "只要有你",
+		Content:   "还珠格格",
 		Timestamp: time.Now(),
-		Intro:     "毛不易演唱",
+		Intro:     "没有了你 山河太阳星星都多余",
 	}
 	if _, err = global.ES.Index().Index(IndexName).BodyJson(article).Do(ctx); err != nil {
 		global.ZAPLOG.Error("add data err --> ", zap.Error(err))
